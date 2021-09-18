@@ -2,13 +2,13 @@
     "cliKey" : "/mble",
     "apiKeys" : [
         {
-            "api" : "randommer",
-            "key" : "b762f5924cee49268c07ed99b25fb287"
+            "api" : "",
+            "key" : ""
         }
     ],
     "greetings" : {
         "enabled" : true,
         "tts" : true,
-        "accountsIgnored" : ["Chip"]
+        "accountsIgnored" : []
     }
 }
