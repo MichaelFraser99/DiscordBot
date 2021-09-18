@@ -30,7 +30,7 @@ func init() {
 	json.Unmarshal(configJson, &Config)
 }
 
-//go run main.go -t ODU1NzcxMjIzNjY0NzU0NzM4.YM3VDw.5Q32nSycfX7FA1aByLv3Yh_CMqk
+//go run main.go -t *token*
 
 func main() {
 	fmt.Printf("Starting bot with token: %v \n", BotToken)
