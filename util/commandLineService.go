@@ -13,6 +13,7 @@ var (
 	apiKey string
 )
 
+//TODO: sort to random shit
 var message discordgo.MessageSend
 
 func ProcessArgument(m *discordgo.MessageCreate, Config structs.Config) *discordgo.MessageSend {
@@ -55,6 +56,34 @@ func ProcessArgument(m *discordgo.MessageCreate, Config structs.Config) *discord
 			message.TTS = true
 			message.Content = GetSingleInsult()
 			return &message
+		} else if parameters[1] == "wizard" {
+			log.Printf("Wizard api")
+			if len(parameters) > 2 {
+				switch parameters[2] {
+				case "elixer":
+					log.Printf("Elixer selected")
+					elixer := GetRandomElixer()
+
+					message.TTS = false
+					message.Content += elixer.Name
+
+					return &message
+				case "house":
+					log.Printf("House selected")
+					house := GetRandomHouse()
+
+					message.TTS = false
+					message.Content += house.Name
+
+					return &message
+				default:
+					log.Printf("None valid value")
+				}
+			} else {
+				message.TTS = false
+				message.Content = "Select option for this command"
+				return &message
+			}
 		}
 
 	}
@@ -62,7 +91,8 @@ func ProcessArgument(m *discordgo.MessageCreate, Config structs.Config) *discord
 	message.TTS = false
 	message.Content = Config.CliKey +
 		"\n\t country [quantity]" +
-		"\n\t insult"
+		"\n\t insult" +
+		"\n\t wizard [elixer,house]"
 	return &message
 }
 

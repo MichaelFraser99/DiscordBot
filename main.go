@@ -30,7 +30,7 @@ func init() {
 	json.Unmarshal(configJson, &Config)
 }
 
-//go run main.go -t *token*
+//go run main.go -t ODU1NzcxMjIzNjY0NzU0NzM4.YM3VDw.MFB-i3APcg0oOyDpryPo099z-mI
 
 func main() {
 	fmt.Printf("Starting bot with token: %v \n", BotToken)
@@ -111,7 +111,7 @@ func voiceStateUpdate(s *discordgo.Session, v *discordgo.VoiceStateUpdate) {
 			log.Fatalf("Failed to get channel name")
 		}
 
-		message.Content = user.Username + " joined " + channel.Name + " by the server"
+		message.Content = user.Username + " joined " + channel.Name + " by the server. They are in " + util.GetRandomHouse().Name + " today..."
 		message.TTS = true
 
 		//Send to general text channel

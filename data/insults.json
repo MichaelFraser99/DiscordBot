@@ -1,7 +1,43 @@
 {
     "insults" : [
         {
-            "insult":""
+            "insult":"Fuck you"
+        }, 
+        {
+            "insult":"You're a bitch"
+        }, 
+        {
+            "insult":"Eat shit"
+        }, 
+        {
+            "insult":"Go fuck yourself"
+        },
+        {
+            "insult":"You look like the turtle from Ice Age"
+        },
+        {
+            "insult":"There is no electricity"
+        },
+        {
+            "insult":"A thousand dicks on your forehead"
+        },
+        {
+            "insult":"You'll be a second class citizen by the time I'm done with you"
+        },
+        {
+            "insult":"Your mother was a hamster, and your father smelt of elderberries"
+        },
+        {
+            "insult":"You're a cunt"
+        },
+        {
+            "insult":"You're French"
+        },
+        {
+            "insult":"I'll appropriate your culture"
+        },
+        {
+            "insult":"You look like a PS1 npc"
         }
     ]
 }
